@@ -1,3 +1,5 @@
+:: TO BE ABLE TO USE THIS BATCH FILE, PLEASE DOWNLOAD filepicker.exe FROM THIS REPO AND MOVE IT TO C:\WINDOWS FOLDER!!!
+:: I DON'T HAVE ANY RIGHTS ON filepicker.exe
 @echo off
 title "Auto DSCP & FSE Utility"
 echo "Compiled by imribiy#0001, codes taken from AtlasOS and EVA"
