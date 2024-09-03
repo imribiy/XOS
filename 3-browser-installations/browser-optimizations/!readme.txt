@@ -1,1 +1,0 @@
-Disabling scheduled tasks and update services of browsers can break some of the functions of browsers. For example Google Sync breaks after a while when you disable scheduled tasks of Google Chrome.
