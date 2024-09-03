@@ -1,1 +1,2 @@
-XOS is not completely open sourced, but here are some files I include in XOS for the users who are missing them.
+You can grab XOS folder content from here if you lost it somehow.
+Some scripts are meant to work on XOS only, so if you try it on some other operating system, I'm not taking any responsibilities.
