@@ -1,0 +1,1 @@
+The VBS system requires Hyper-V to be enabled as well. So please do not deactivate Hyper-V if you want to keep VBS enabled.

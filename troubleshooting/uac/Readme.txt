@@ -1,0 +1,1 @@
+If you don't want applications to run as administrator automatically, enable UAC back.
