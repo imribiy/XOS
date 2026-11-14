@@ -4,7 +4,7 @@ XOS is a Windows optimization suite for gaming and privacy. It removes bloat, tu
 
 ## Download
 
-**[Get the latest XOS release](https://github.com/imribiy/xos-playbook/releases/latest)**: download `XOS V<version>.apbx` and open it with [AME Wizard](https://ameliorated.io). All builds, including developer betas, are on the [releases page](https://github.com/imribiy/xos-playbook/releases).
+**[Get the latest XOS release](https://github.com/imribiy/xos-playbook/releases/latest)**: download `XOS V<version>.apbx` and open it with [AME Wizard](https://ameliorated.io). All builds, including developer betas, are on the [releases page](https://github.com/imribiy/xos-playbook/releases). The XOS Toolkit installer is also available on its own from [Toolkit releases](https://github.com/imribiy/xos-toolkit/releases).
 
 Questions and bug reports go to GitHub issues: [playbook issues](https://github.com/imribiy/xos-playbook/issues) for installing XOS, [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues) for the app. Please search the existing issues first; your question may already be answered.
 
