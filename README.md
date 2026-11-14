@@ -20,7 +20,7 @@ Supported Windows versions: Windows 10 22H2 and Windows 11 23H2, 25H2 and 26H2.
 
 ## Branding
 
-Wallpapers (`xos-modern-wallpaper.jpg`, `xos-legacy-wallpaper.jpg`, `xos-babyblue.jpg`, `xos_2026wallpaper.jpg`, `phone_wallpaper.jpg`), the source artwork (`XOS.psd`) and the XOS NVIDIA Profile Inspector profile (`XOS.nip`) are in this repository.
+Wallpapers (`xos-modern-wallpaper.jpg`, `xos-legacy-wallpaper.jpg`, `xos-babyblue.jpg`, `xos_2026wallpaper.jpg`, `phone_wallpaper.jpg`) and the source artwork (`XOS.psd`) are in this repository. The XOS NVIDIA profile (`XOS.nip`) is part of [xos-toolkit](https://github.com/imribiy/xos-toolkit), which applies it from the Gaming page.
 
 The XOS name and logo belong to the project. Please don't use them for other projects or modified builds.
 
