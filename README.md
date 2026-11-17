@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 # XOS
 
 XOS is a Windows optimization suite for gaming and privacy. It removes bloat, turns off telemetry and background noise, and tunes Windows for low latency, while keeping every change reversible from its companion app.
@@ -121,6 +128,17 @@ Yes, but both require the latest Windows security updates. Use a current Windows
 
 **Valorant or Fortnite asks for VBS, HVCI or Core Isolation.**
 Turn on **Virtualization-Based Security (VBS)** and then **Memory Integrity (HVCI)** on XOS Toolkit's **System** page, and restart your PC.
+
+https://github.com/user-attachments/assets/29b0c219-ed0b-4ef0-baef-7e72aed6499c
+
+
+
+https://github.com/user-attachments/assets/ab9c1a1c-6c76-4b11-a40c-1acec17bbea5
+
+
+https://github.com/user-attachments/assets/db590f07-9ce6-4f55-963a-44e9f7b77b4f
+
+
 
 ## Branding
 
