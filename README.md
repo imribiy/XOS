@@ -76,7 +76,7 @@ https://github.com/user-attachments/assets/db590f07-9ce6-4f55-963a-44e9f7b77b4f
 
 ### Problems
 
-Read the [FAQ](#faq) below, then search the [playbook issues](https://github.com/imribiy/xos-playbook/issues) and [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues). The XOS Discord has more pinned answers in its [FAQ and playbook support channels](https://discord.com/channels/942355007271997450/1450907216575070402/1451790132498665613). If you report a problem, attach the diagnostic bundle from XOS Toolkit's **Troubleshooting** page (**Export Diagnostic Bundle**).
+Read the [FAQ](#faq) below, then search the [playbook issues](https://github.com/imribiy/xos-playbook/issues) and [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues). If you report a problem, attach the diagnostic bundle from XOS Toolkit's **Troubleshooting** page (**Export Diagnostic Bundle**).
 
 ## FAQ
 
@@ -98,8 +98,11 @@ If you dual-boot, [InstallWindowsWithoutUSB](https://github.com/imribiy/InstallW
 
 https://github.com/user-attachments/assets/29b0c219-ed0b-4ef0-baef-7e72aed6499c
 
+**Why a playbook instead of a custom ISO?**
+A playbook is a script that AME Wizard runs on your own installation of stock Windows; it applies all of XOS's optimizations, removals and tweaks in one go. Because Windows itself is untouched, drivers and Windows Update work far better than on a modified ISO, and both Home and Pro editions are supported. The trade-off is that stock Windows installs some extra apps and drivers of its own before you apply XOS. XOS no longer ships ISOs.
+
 **Can I update XOS without reinstalling Windows?**
-Yes. That is why XOS moved to the AME Wizard playbook format: run the newer playbook over your current installation.
+Yes. That is why XOS moved to the AME Wizard playbook format: run the newer playbook over your current installation. Running it again also helps after a large Windows update, which can reset some settings or bring back removed apps.
 
 **Where is the source?**
 The playbook source is in [xos-playbook](https://github.com/imribiy/xos-playbook) and the Toolkit source in [xos-toolkit](https://github.com/imribiy/xos-toolkit), under the [license](#license) below.
