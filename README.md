@@ -18,14 +18,61 @@ Questions and bug reports go to GitHub issues: [playbook issues](https://github.
 
 Supported Windows versions: Windows 10 22H2 and Windows 11 23H2, 25H2 and 26H2.
 
+## Installation guide
+
+Based on Naene's guide. Apply XOS to a stock Windows installation, ideally a fresh one. Don't run it over another optimization playbook or a modified ISO. You can apply a newer XOS release over an existing XOS installation.
+
+### 1. Before you start
+
+1. **Get the files.** Download [AME Wizard](https://ameliorated.io) and the latest `XOS V<version>.apbx` from the [releases page](https://github.com/imribiy/xos-playbook/releases/latest).
+2. **Pick a supported Windows version.** XOS installs only on these builds:
+   - Windows 10 22H2 (build 19045)
+   - Windows 11 23H2 (22631), 25H2 (26200) and 26H2 (26300)
+
+   Any other version, including older Windows 10 releases, Windows 11 24H2 and the device-only Windows 11 26H1, is refused by AME Wizard. Use the **Pro** edition if you can: on Home, Windows ignores the policy XOS uses to turn off automatic updates.
+3. **Get a stock ISO.** Download Windows from Microsoft: [Windows 11](https://www.microsoft.com/software-download/windows11) or [Windows 10](https://www.microsoft.com/software-download/windows10). Microsoft only offers the current release. Older stock ISOs are linked [on the XOS Discord](https://discord.com/channels/942355007271997450/942355562958573628/1463774234957320367).
+4. **Choose how to install Windows.**
+   - From a USB drive made with [Ventoy](https://www.ventoy.net/en/download.html) (recommended) or [Rufus](https://rufus.ie/en/).
+   - Without a USB drive, using [InstallWindowsWithoutUSB](https://github.com/imribiy/InstallWindowsWithoutUSB).
+
+### 2. Install Windows
+
+1. **Stay offline.** Disconnect the network cable and don't join Wi-Fi before the first boot. This avoids updates during setup and lets you make a local account. If you want updates during setup, stay connected, but you will need the next step to avoid a Microsoft account.
+2. **Create a local account.** On Windows 11, when setup asks for a network or a Microsoft account, press `Shift + F10` and run `start ms-cxh:localonly`, then create a local account. On older Windows 11 builds where that does nothing, run `oobe\bypassnro` instead; the PC restarts and offers "I don't have internet". On Windows 10, choose "Offline account" (or "Domain join instead" on Pro).
+3. **Turn off Smart App Control** (Windows 11): Windows Security > App & browser control > Smart App Control settings > Off. When it is on, AME Wizard can fail while loading the playbook.
+
+### 3. Apply XOS
+
+1. Uninstall any third-party antivirus; AME Wizard refuses to run while one is installed.
+2. Open AME Wizard, drag `XOS V<version>.apbx` into it and follow its steps. It walks you through turning off Defender's protections, which it needs before it can apply anything.
+3. Pick your options (Defender, UAC, Edge, wallpaper, printing and the optional removals), apply, and restart when it finishes. XOS Toolkit is installed with the playbook.
+
+### 4. After installation
+
+1. **Connect and set the clock.** Connect to the internet, set your time zone, and use **Sync now** under Settings > Time & language > Date & time.
+2. **Install runtimes and apps.** In XOS Toolkit, open **App Installer** and install everything under **Essential Runtimes**. If you removed Edge, install a browser from the same page.
+3. **Choose an update policy.** XOS Toolkit's **Updates** page has four modes:
+   - **Normal** turns Windows Update fully back on. Choose it if you use the Microsoft Store or play on FACEIT or ESEA.
+   - **Security Focused** delays feature upgrades and previews.
+   - **Disabled**, the XOS default, stops automatic updates; you update yourself from Settings.
+   - **Hard Disabled** also blocks the update services and can break the Microsoft Store. It is unavailable while a Microsoft account is signed in.
+
+   Driver updates through Windows Update are a separate switch under **Driver & Store Updates**.
+4. **Install your graphics driver.**
+   - **NVIDIA:** install the latest driver from NVIDIA and choose a custom installation, or strip it down with [NVCleanstall](https://www.techpowerup.com/nvcleanstall/) (run it as administrator). If you need ShadowPlay, tick ShadowPlay in NVCleanstall and accept its component dependencies. Then open XOS Toolkit's **Gaming** page and click **Apply XOS.nip** under NVIDIA Profile Inspector.
+   - **AMD:** for RDNA2 (RX 6000) and older cards, [Radeon-ID drivers](https://rdn-id.com/) are a good choice. For newer cards, use AMD's latest driver, optionally trimmed with [Radeon Software Slimmer](https://github.com/GSDragoon/RadeonSoftwareSlimmer). Optionally, apply **Safe** under AMD Radeon GPU Tweaks on the **Gaming** page and restart. **Experimental** goes further and may not suit every system.
+
+### Problems
+
+Read the [FAQ](#faq) below, then search the [playbook issues](https://github.com/imribiy/xos-playbook/issues) and [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues). The XOS Discord has a [common issues list](https://discord.com/channels/942355007271997450/1434201417467433001/1436334458679595069) and pinned answers in its [FAQ and playbook support channels](https://discord.com/channels/942355007271997450/1450907216575070402/1451790132498665613). If you report a problem, attach the diagnostic bundle from XOS Toolkit's **Troubleshooting** page (**Export Diagnostic Bundle**).
+
 ## FAQ
 
 ### Installation and setup
 
 **Is there a guide for installing XOS and what to do afterwards?**
-XOS is not meant for beginners. If you want to try anyway, these community guides help:
+XOS is not meant for beginners. If you want to try anyway, follow the [installation guide](#installation-guide) above. These community guides help too:
 
-- [Naene's guide](https://discord.com/channels/942355007271997450/942355562958573628/1415062922362622123) (on the XOS Discord)
 - [Fernbacher's guide](https://forged-blog.vercel.app/#/post/how-to-install-a-custom-windows-iso)
 - [Cyanide's video guide](https://www.youtube.com/watch?v=FbkBdWbCXx8). It shows ReviOS, but the first 20 minutes, a clean Windows installation from a stock image, are the same for XOS.
 
