@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 # XOS
 
 XOS is a Windows optimization suite for gaming and privacy. It removes bloat, turns off telemetry and background noise, and tunes Windows for low latency, while keeping every change reversible from its companion app.
@@ -37,7 +30,15 @@ Based on Naene's guide. Apply XOS to a stock Windows installation, ideally a fre
    - Windows 11 23H2 (22631), 25H2 (26200) and 26H2 (26300)
 
    Any other version, including older Windows 10 releases, Windows 11 24H2 and the device-only Windows 11 26H1, is refused by AME Wizard. Use the **Pro** edition if you can: on Home, Windows ignores the policy XOS uses to turn off automatic updates.
-3. **Get a stock ISO.** Download Windows from Microsoft: [Windows 11](https://www.microsoft.com/software-download/windows11) or [Windows 10](https://www.microsoft.com/software-download/windows10). Microsoft only offers the current release. Older stock ISOs are linked [on the XOS Discord](https://discord.com/channels/942355007271997450/942355562958573628/1463774234957320367).
+3. **Get a stock ISO.** Download Windows from Microsoft: [Windows 11](https://www.microsoft.com/software-download/windows11) or [Windows 10](https://www.microsoft.com/software-download/windows10). Microsoft only offers the current release. For an older build, or if the Microsoft download fails, these sites offer stock images:
+   - [MASSgrave](https://massgrave.dev/genuine-installation-media)
+   - [OSclick](https://os.click/en) (downloads can be slow)
+   - [RGadguard](https://files.rg-adguard.net/version/83fb91c9-107c-bdda-1ffc-2952d753a472)
+   - [UUP dump](https://uupdump.net/)
+   - [BobPony](https://bobpony.com/downloads/)
+   - [Internet Archive](https://archive.org/details/english_windows_collection) (scroll down and use the side panel to browse the contents)
+
+   Whichever source you use, pick one of the supported builds above.
 4. **Choose how to install Windows.**
    - From a USB drive made with [Ventoy](https://www.ventoy.net/en/download.html) (recommended) or [Rufus](https://rufus.ie/en/).
    - Without a USB drive, using [InstallWindowsWithoutUSB](https://github.com/imribiy/InstallWindowsWithoutUSB).
@@ -53,6 +54,10 @@ Based on Naene's guide. Apply XOS to a stock Windows installation, ideally a fre
 1. Uninstall any third-party antivirus; AME Wizard refuses to run while one is installed.
 2. Open AME Wizard, drag `XOS V<version>.apbx` into it and follow its steps. It walks you through turning off Defender's protections, which it needs before it can apply anything.
 3. Pick your options (Defender, UAC, Edge, wallpaper, printing and the optional removals), apply, and restart when it finishes. XOS Toolkit is installed with the playbook.
+
+Video guide, applying the XOS playbook:
+
+https://github.com/user-attachments/assets/db590f07-9ce6-4f55-963a-44e9f7b77b4f
 
 ### 4. After installation
 
@@ -71,7 +76,7 @@ Based on Naene's guide. Apply XOS to a stock Windows installation, ideally a fre
 
 ### Problems
 
-Read the [FAQ](#faq) below, then search the [playbook issues](https://github.com/imribiy/xos-playbook/issues) and [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues). The XOS Discord has a [common issues list](https://discord.com/channels/942355007271997450/1434201417467433001/1436334458679595069) and pinned answers in its [FAQ and playbook support channels](https://discord.com/channels/942355007271997450/1450907216575070402/1451790132498665613). If you report a problem, attach the diagnostic bundle from XOS Toolkit's **Troubleshooting** page (**Export Diagnostic Bundle**).
+Read the [FAQ](#faq) below, then search the [playbook issues](https://github.com/imribiy/xos-playbook/issues) and [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues). The XOS Discord has more pinned answers in its [FAQ and playbook support channels](https://discord.com/channels/942355007271997450/1450907216575070402/1451790132498665613). If you report a problem, attach the diagnostic bundle from XOS Toolkit's **Troubleshooting** page (**Export Diagnostic Bundle**).
 
 ## FAQ
 
@@ -84,10 +89,14 @@ XOS is not meant for beginners. If you want to try anyway, follow the [installat
 - [Cyanide's video guide](https://www.youtube.com/watch?v=FbkBdWbCXx8). It shows ReviOS, but the first 20 minutes, a clean Windows installation from a stock image, are the same for XOS.
 
 **Which tool should I use to write the Windows ISO to a USB drive?**
-[Ventoy](https://www.ventoy.net/en/download.html) rather than Rufus. It is faster, and one USB drive can hold several ISO files plus your own data. [Video guide](https://discord.com/channels/942355007271997450/950714161590075413/1394337416994623498) (on the XOS Discord).
+[Ventoy](https://www.ventoy.net/en/download.html) rather than Rufus. It is faster, and one USB drive can hold several ISO files plus your own data. Video guide, preparing a USB drive with Ventoy:
+
+https://github.com/user-attachments/assets/ab9c1a1c-6c76-4b11-a40c-1acec17bbea5
 
 **Can I install Windows without a USB drive?**
-If you dual-boot, [InstallWindowsWithoutUSB](https://github.com/imribiy/InstallWindowsWithoutUSB) is the fastest and easiest way. [Video guide](https://discord.com/channels/942355007271997450/950714161590075413/1453804010355298345) (on the XOS Discord).
+If you dual-boot, [InstallWindowsWithoutUSB](https://github.com/imribiy/InstallWindowsWithoutUSB) is the fastest and easiest way. Video guide:
+
+https://github.com/user-attachments/assets/29b0c219-ed0b-4ef0-baef-7e72aed6499c
 
 **Can I update XOS without reinstalling Windows?**
 Yes. That is why XOS moved to the AME Wizard playbook format: run the newer playbook over your current installation.
@@ -102,6 +111,25 @@ XOS pauses Windows Update, so Windows doesn't install drivers for you. Either do
 
 **A Windows feature is missing or broken.**
 This is usually a disabled service. If the feature isn't on the unsupported list, open XOS Toolkit's **Troubleshooting** page, choose **Windows Defaults** under Restore Service Defaults, and restart your PC.
+
+**An app's pop-ups, overlay or new-message alerts don't show.**
+Most apps with overlays or pop-ups need **Notifications** or **Background Apps**, both on XOS Toolkit's **System** page; browsers in particular. Restart after changing either.
+
+- **Notifications:** NVIDIA App, WhatsApp, Clipboard History, Xbox Game Bar, the Xbox app, and Windows' own reminder and timer apps.
+- **Background Apps:** WhatsApp, Telegram, Signal Desktop, Microsoft Teams and Discord (for message pop-ups while it is closed).
+- **Xbox Game Bar** also needs **Enable Game Bar Only** under **Game Bar & Full Screen Mode** on the **Gaming** page.
+
+**An app won't start or shows an empty window.**
+Many apps need the Microsoft Edge WebView2 Runtime, among them the Microsoft Store, Microsoft Teams, Outlook, WhatsApp, Discord and Spotify. Install **Edge WebView2 Runtime** from **Essential Runtimes** on XOS Toolkit's **App Installer** page, or get it from [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/webview2).
+
+**A script or app complains that it is running as administrator.**
+With User Account Control off, every program you start runs with administrator rights. Some PowerShell commands refuse that; Spicetify is a known case. Turn on **User Account Control (UAC)** on XOS Toolkit's **System** page and restart.
+
+**My laptop's touchpad or another built-in device doesn't work.**
+Click **Enable Serial Ports** on XOS Toolkit's **Peripherals** page and enable **Power Savings** on the **System** page, then restart your PC.
+
+**The Microsoft Store doesn't work.**
+Use AME Wizard 0.8.4 or newer to apply XOS, then choose **Normal** on XOS Toolkit's **Updates** page and restart your PC. On Windows 11 23H2 this can take several tries; the Store is more reliable on 25H2.
 
 ### Performance and tweaking (what not to do)
 
@@ -126,19 +154,11 @@ Never. Both are unreliable and are likely to break XOS's changes. If your system
 **Can I play on FACEIT or ESEA?**
 Yes, but both require the latest Windows security updates. Use a current Windows release (Windows 11 25H2 or newer) with every update installed.
 
-**Valorant or Fortnite asks for VBS, HVCI or Core Isolation.**
+**Valorant, FACEIT, Fortnite or FiveM asks for VBS, HVCI or Core Isolation.**
 Turn on **Virtualization-Based Security (VBS)** and then **Memory Integrity (HVCI)** on XOS Toolkit's **System** page, and restart your PC.
 
-https://github.com/user-attachments/assets/29b0c219-ed0b-4ef0-baef-7e72aed6499c
-
-
-
-https://github.com/user-attachments/assets/ab9c1a1c-6c76-4b11-a40c-1acec17bbea5
-
-
-https://github.com/user-attachments/assets/db590f07-9ce6-4f55-963a-44e9f7b77b4f
-
-
+**FiveM doesn't start or doesn't work properly.**
+FiveM needs some services that XOS turns off. Click **Enable FiveM Services** on XOS Toolkit's **Gaming** page and restart. If it still fails, also enable **GPU & Network Monitoring** and **System Usage & Diagnostics Reporting** on the **System** page.
 
 ## Branding
 
