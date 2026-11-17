@@ -6,7 +6,7 @@ XOS is a Windows optimization suite for gaming and privacy. It removes bloat, tu
 
 **[Get the latest XOS release](https://github.com/imribiy/xos-playbook/releases/latest)**: download `XOS V<version>.apbx` and open it with [AME Wizard](https://ameliorated.io). All builds, including developer betas, are on the [releases page](https://github.com/imribiy/xos-playbook/releases). The XOS Toolkit installer is also available on its own from [Toolkit releases](https://github.com/imribiy/xos-toolkit/releases).
 
-Questions and bug reports go to GitHub issues: [playbook issues](https://github.com/imribiy/xos-playbook/issues) for installing XOS, [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues) for the app. Please search the existing issues first; your question may already be answered.
+Questions and bug reports go to GitHub issues; read [Problems](#problems) before opening one.
 
 ## The project
 
@@ -15,8 +15,6 @@ Questions and bug reports go to GitHub issues: [playbook issues](https://github.
 | [xos-playbook](https://github.com/imribiy/xos-playbook) | The AME Wizard playbook that installs XOS, and the releases |
 | [xos-toolkit](https://github.com/imribiy/xos-toolkit) | XOS Toolkit, the desktop app for applying and undoing XOS tweaks one at a time, with the XOS-CpuService CPU affinity companion |
 | XOS (this repository) | Branding, wallpapers and general information |
-
-Supported Windows versions: Windows 10 22H2 and Windows 11 23H2, 25H2 and 26H2.
 
 ## Installation guide
 
@@ -39,9 +37,7 @@ Based on Naene's guide. Apply XOS to a stock Windows installation, ideally a fre
    - [Internet Archive](https://archive.org/details/english_windows_collection) (scroll down and use the side panel to browse the contents)
 
    Whichever source you use, pick one of the supported builds above.
-4. **Choose how to install Windows.**
-   - From a USB drive made with [Ventoy](https://www.ventoy.net/en/download.html) (recommended) or [Rufus](https://rufus.ie/en/).
-   - Without a USB drive, using [InstallWindowsWithoutUSB](https://github.com/imribiy/InstallWindowsWithoutUSB).
+4. **Choose how to install Windows:** from a USB drive made with Ventoy (recommended) or [Rufus](https://rufus.ie/en/), or without a USB drive using InstallWindowsWithoutUSB. [Installation and setup](#installation-and-setup) in the FAQ explains both and has a video guide for each.
 
 ### 2. Install Windows
 
@@ -76,7 +72,7 @@ https://github.com/user-attachments/assets/db590f07-9ce6-4f55-963a-44e9f7b77b4f
 
 ### Problems
 
-Read the [FAQ](#faq) below, then search the [playbook issues](https://github.com/imribiy/xos-playbook/issues) and [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues). If you report a problem, attach the diagnostic bundle from XOS Toolkit's **Troubleshooting** page (**Export Diagnostic Bundle**).
+Read the [FAQ](#faq) below, then search the existing issues, since your question may already be answered: [playbook issues](https://github.com/imribiy/xos-playbook/issues) for installing XOS, [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues) for the app. If you report a problem, attach the diagnostic bundle from XOS Toolkit's **Troubleshooting** page (**Export Diagnostic Bundle**).
 
 ## FAQ
 
