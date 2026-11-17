@@ -47,7 +47,7 @@ Based on Naene's guide. Apply XOS to a stock Windows installation, ideally a fre
 
 1. **Stay offline.** Disconnect the network cable and don't join Wi-Fi before the first boot. This avoids updates during setup and lets you make a local account. If you want updates during setup, stay connected, but you will need the next step to avoid a Microsoft account.
 2. **Create a local account.** On Windows 11, when setup asks for a network or a Microsoft account, press `Shift + F10` and run `start ms-cxh:localonly`, then create a local account. On older Windows 11 builds where that does nothing, run `oobe\bypassnro` instead; the PC restarts and offers "I don't have internet". On Windows 10, choose "Offline account" (or "Domain join instead" on Pro).
-3. **Turn off Smart App Control** (Windows 11): Windows Security > App & browser control > Smart App Control settings > Off. When it is on, AME Wizard can fail while loading the playbook.
+3. **Turn off Smart App Control** (Windows 11): Windows Security > App & browser control > Smart App Control settings > Off. When it is on, AME Wizard can fail while loading the playbook with a `FileNotFoundException` error; turn it off and restart AME Wizard. Once off, Smart App Control can only be turned back on by reinstalling Windows.
 
 ### 3. Apply XOS
 
@@ -128,6 +128,9 @@ Many apps need the Microsoft Edge WebView2 Runtime, among them the Microsoft Sto
 **A script or app complains that it is running as administrator.**
 With User Account Control off, every program you start runs with administrator rights. Some PowerShell commands refuse that; Spicetify is a known case. Turn on **User Account Control (UAC)** on XOS Toolkit's **System** page and restart.
 
+**My Xbox controller doesn't work over Bluetooth.**
+Click **Enable Bluetooth** on XOS Toolkit's **Network** page, install your Bluetooth driver and restart. If the controller still doesn't work, install or update [Xbox Accessories](https://apps.microsoft.com/detail/9nblggh30xj3) from the Microsoft Store (see the Microsoft Store answer below if the Store doesn't open).
+
 **My laptop's touchpad or another built-in device doesn't work.**
 Click **Enable Serial Ports** on XOS Toolkit's **Peripherals** page and enable **Power Savings** on the **System** page, then restart your PC.
 
@@ -158,7 +161,13 @@ Never. Both are unreliable and are likely to break XOS's changes. If your system
 Yes, but both require the latest Windows security updates. Use a current Windows release (Windows 11 25H2 or newer) with every update installed.
 
 **Valorant, FACEIT, Fortnite or FiveM asks for VBS, HVCI or Core Isolation.**
-Turn on **Virtualization-Based Security (VBS)** and then **Memory Integrity (HVCI)** on XOS Toolkit's **System** page, and restart your PC.
+Go through this checklist in order; each step needs the one before it.
+
+1. **TPM 2.0** is enabled in your BIOS (often called fTPM on AMD or PTT on Intel).
+2. **BIOS mode is UEFI**, not Legacy or CSM. If it is Legacy, check whether your Windows drive is MBR or GPT (Disk Management, the disk's Properties, Volumes tab). An MBR drive must be converted to GPT first (Windows' `mbr2gpt` tool); then switch the BIOS to UEFI. Don't change Secure Boot settings until the BIOS mode is UEFI.
+3. **Secure Boot** is enabled in your BIOS.
+4. **CPU virtualization** (SVM on AMD, VT-x on Intel) and **IOMMU** (on Intel boards often listed as VT-d) are enabled in your BIOS.
+5. Turn on **Virtualization-Based Security (VBS)** and then **Memory Integrity (HVCI)** on XOS Toolkit's **System** page, and restart your PC.
 
 **FiveM doesn't start or doesn't work properly.**
 FiveM needs some services that XOS turns off. Click **Enable FiveM Services** on XOS Toolkit's **Gaming** page and restart. If it still fails, also enable **GPU & Network Monitoring** and **System Usage & Diagnostics Reporting** on the **System** page.
