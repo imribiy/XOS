@@ -25,14 +25,15 @@ Supported Windows versions: Windows 10 22H2 and Windows 11 23H2, 25H2 and 26H2.
 **Is there a guide for installing XOS and what to do afterwards?**
 XOS is not meant for beginners. If you want to try anyway, these community guides help:
 
+- [Naene's guide](https://discord.com/channels/942355007271997450/942355562958573628/1415062922362622123) (on the XOS Discord)
 - [Fernbacher's guide](https://forged-blog.vercel.app/#/post/how-to-install-a-custom-windows-iso)
 - [Cyanide's video guide](https://www.youtube.com/watch?v=FbkBdWbCXx8). It shows ReviOS, but the first 20 minutes, a clean Windows installation from a stock image, are the same for XOS.
 
 **Which tool should I use to write the Windows ISO to a USB drive?**
-[Ventoy](https://www.ventoy.net/en/download.html) rather than Rufus. It is faster, and one USB drive can hold several ISO files plus your own data.
+[Ventoy](https://www.ventoy.net/en/download.html) rather than Rufus. It is faster, and one USB drive can hold several ISO files plus your own data. [Video guide](https://discord.com/channels/942355007271997450/950714161590075413/1394337416994623498) (on the XOS Discord).
 
 **Can I install Windows without a USB drive?**
-If you dual-boot, [InstallWindowsWithoutUSB](https://github.com/imribiy/InstallWindowsWithoutUSB) is the fastest and easiest way.
+If you dual-boot, [InstallWindowsWithoutUSB](https://github.com/imribiy/InstallWindowsWithoutUSB) is the fastest and easiest way. [Video guide](https://discord.com/channels/942355007271997450/950714161590075413/1453804010355298345) (on the XOS Discord).
 
 **Can I update XOS without reinstalling Windows?**
 Yes. That is why XOS moved to the AME Wizard playbook format: run the newer playbook over your current installation.
