@@ -72,7 +72,7 @@ https://github.com/user-attachments/assets/db590f07-9ce6-4f55-963a-44e9f7b77b4f
 
 ### Problems
 
-Read the [FAQ](#faq) below, then search the existing issues, since your question may already be answered: [playbook issues](https://github.com/imribiy/xos-playbook/issues) for installing XOS, [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues) for the app. If you report a problem, attach the diagnostic bundle from XOS Toolkit's **Troubleshooting** page (**Export Diagnostic Bundle**).
+Read the [FAQ](#faq) below, then search the existing issues, since your question may already be answered: [playbook issues](https://github.com/imribiy/xos-playbook/issues) for installing XOS, [Toolkit issues](https://github.com/imribiy/xos-toolkit/issues) for the app. To report a problem, click **Report a Problem** on XOS Toolkit's **Troubleshooting** page: it creates a diagnostic bundle with personal details removed and opens a bug report with your Toolkit and Windows versions filled in. Drag the ZIP into the report; reports are public, so look through it first.
 
 ## FAQ
 
