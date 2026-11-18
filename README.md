@@ -4,7 +4,10 @@ XOS is a Windows optimization suite for gaming and privacy. It removes bloat, tu
 
 ## Download
 
-**[Get the latest XOS release](https://github.com/imribiy/xos-playbook/releases/latest)**: download `XOS V<version>.apbx` and open it with [AME Wizard](https://ameliorated.io). All builds, including developer betas, are on the [releases page](https://github.com/imribiy/xos-playbook/releases). The XOS Toolkit installer is also available on its own from [Toolkit releases](https://github.com/imribiy/xos-toolkit/releases).
+**[Get the latest XOS release](https://github.com/imribiy/xos-playbook/releases/latest)**: download `XOS V<version>.apbx` and open it with [AME Wizard](https://ameliorated.io). Earlier releases are on the [releases page](https://github.com/imribiy/xos-playbook/releases). The XOS Toolkit installer is also available on its own from [Toolkit releases](https://github.com/imribiy/xos-toolkit/releases).
+
+> [!WARNING]
+> **Developer betas are for advanced users only.** New builds are tested first as betas in **[xos-beta](https://github.com/imribiy/xos-beta/releases)**. They are tested only in virtual machines, not on real hardware: expect bugs, back up important files and keep a Windows setup USB at hand in case the system no longer starts. If you are not sure, use the stable release above. A beta build's AME Wizard **Updates** button offers newer betas; a stable build's offers only stable releases.
 
 Questions and bug reports go to GitHub issues; read [Problems](#problems) before opening one.
 
@@ -13,6 +16,7 @@ Questions and bug reports go to GitHub issues; read [Problems](#problems) before
 | Repository | What it is |
 |---|---|
 | [xos-playbook](https://github.com/imribiy/xos-playbook) | The AME Wizard playbook that installs XOS, and the releases |
+| [xos-beta](https://github.com/imribiy/xos-beta) | Developer beta builds, for advanced users who accept bugs |
 | [xos-toolkit](https://github.com/imribiy/xos-toolkit) | XOS Toolkit, the desktop app for applying and undoing XOS tweaks one at a time, with the XOS-CpuService CPU affinity companion |
 | XOS (this repository) | Branding, wallpapers and general information |
 
